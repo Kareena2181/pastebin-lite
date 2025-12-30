@@ -107,7 +107,7 @@ export async function consumeView(
   if (code === 1) return { status: 'expired' };
   if (code === 2) return { status: 'exhausted' };
 
-  const content = result[1];
+  const content = result[1] as string;
   const remainingViews =
     result[2] === null || result[2] === undefined
       ? null
